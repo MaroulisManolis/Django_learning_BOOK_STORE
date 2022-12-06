@@ -4,6 +4,9 @@ from .models import Book, Author
 
 # Register your models here.
 
+class AuthorAdmin(admin.ModelAdmin):
+    
+
 class BookAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
     list_filter = ("author", "rating",)
